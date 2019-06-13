@@ -1,0 +1,14 @@
+mat-card-content h1{
+    padding-left: 100px;
+}
+
+.form-tarefas{
+    text-align: center;
+    width: 100%;
+}
+
+.form-tarefas mat-form-field{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
