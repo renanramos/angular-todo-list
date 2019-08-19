@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MatCardModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule } from '@angular/material';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
+import { TarefasCardComponent } from './lista-tarefas/tarefas-card/tarefas-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefasComponent,
-    ListaTarefasComponent
+    ListaTarefasComponent,
+    TarefasCardComponent
   ],
   imports: [
     BrowserModule,

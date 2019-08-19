@@ -1,41 +1,59 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { TarefaService } from '../service/tarefa-service.service';
+import { Tarefa } from '../model/tarefa';
 
 @Component({
   selector: 'app-tarefas',
   templateUrl: './tarefas.component.html',
-  styleUrls: ['./tarefas.component.css']
+  styleUrls: ['./tarefas.component.css'],
+  providers: [TarefaService]
 })
 export class TarefasComponent implements OnInit {
 
-  @Output() adicionaTarefa = new EventEmitter<any>();
-
-  tarefaForm: FormGroup;
+  tarefa = {
+    titulo: '',
+    descricao: ''
+  };
+  
+  error = {
+    message: ''
+  };
 
   constructor(
-    private formBuilder: FormBuilder
+    private tarefaService: TarefaService
   ) { }
 
   ngOnInit() {
-    this.tarefaForm = this.formBuilder.group({      
-      titulo: ['', Validators.required ],
-      descricao: ['', Validators.required]
-    })
   }
 
-  get tarefa(){
-    return this.tarefaForm.controls;
-  }
+  salvarTarefa(tarefa: Tarefa) {
+    if (!tarefa.titulo || !tarefa.descricao) {
+      this.getError();
+    } else {
 
-  salvarTarefa(tarefa){
-    
-    let newTarefa = {
-      titulo : tarefa.titulo.value,
-      descricao : tarefa.descricao.value
+      let novaTarefa = new Tarefa(tarefa.titulo, tarefa.descricao);
+
+      this.tarefaService.addTarefa(novaTarefa);
+      this.resetFields(tarefa);
     }
+  }
 
-    this.adicionaTarefa.emit(newTarefa);
+  limpar(tarefa: Tarefa) {
+    this.resetFields(tarefa);
+  }
+
+  resetFields(tarefa: Tarefa) {
+    tarefa.titulo = '';
+    tarefa.descricao = '';
     
+    if (this.error.message) {
+      this.error.message = '';
+    }
+  }
+
+  getError() {
+    let field = Object.keys(this.tarefa).filter(elem => !this.tarefa[elem])
+    this.error.message = `Campos obrigatórios: ${field}`;
   }
 
 }

@@ -1,3 +1,12 @@
-<p>
-  {{tarefa.titulo}}
-</p>
+<div *ngIf="tarefas.length > 0; else semTarefas">
+  <div *ngFor="let tarefa of tarefas.reverse()" class="lista-tarefas">
+    <app-tarefas-card [tarefa]="tarefa" *ngIf="tarefa"></app-tarefas-card>
+  </div>
+</div>
+<ng-template #semTarefas>
+  <div class="sem-tarefas">
+    <p>
+      Não há tarefas incluídas no momento.
+    </p>
+  </div>
+</ng-template>

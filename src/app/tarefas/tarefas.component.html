@@ -1,18 +1,22 @@
 <mat-card>
   <mat-card-content>
     <section class="form-tarefas">
-      <form [formGroup]="tarefaForm">
+      <div class="input-form">
         <mat-form-field>
-          <input matInput placeholder="Nome" name="titulo" formControlName="titulo" />
+          <mat-label>Título</mat-label>
+          <input matInput placeholder="Título" [(ngModel)]="tarefa.titulo" />
+          <mat-error *ngIf="erro">{{ error.message }}</mat-error>
         </mat-form-field><br>
         <mat-form-field>
-          <textarea matInput placeholder="Descrição" name="descricao" formControlName="descricao"></textarea>
+          <mat-label>Descrição</mat-label>
+          <textarea matInput placeholder="Descrição" [(ngModel)]="tarefa.descricao" ></textarea>
         </mat-form-field>
+        <mat-error *ngIf="error">{{ error.message }}</mat-error>
+      </div>
         <div class="button-group">
           <button mat-raised-button class="btn btn-salvar" (click)="salvarTarefa(tarefa);">Salvar</button>
-          <button mat-raised-button class="btn btn-cancelar">Cancelar</button>
+          <button mat-raised-button class="btn btn-cancelar" (click)="limpar(tarefa);">Limpar</button>
         </div>
-      </form>
     </section>
   </mat-card-content>
 </mat-card>

@@ -1,0 +1,8 @@
+mat-card{
+    display: block;
+}
+
+mat-card-header > small{
+    margin-top: 5px;
+    vertical-align: middle;
+}

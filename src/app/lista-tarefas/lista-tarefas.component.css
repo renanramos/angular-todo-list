@@ -1,0 +1,9 @@
+.lista-tarefas{
+    display: inline-block;
+    margin: 10px 5px;    
+}
+
+.sem-tarefas{
+    color: whitesmoke;
+    margin: 100px auto;
+}

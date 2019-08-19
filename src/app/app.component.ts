@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  tarefas: any[] = [];
-
-  adicionaNovaTarefa(tarefa: any){
-    this.tarefas.push(tarefa)
-    console.log(this.tarefas)
-  }
-
 }
