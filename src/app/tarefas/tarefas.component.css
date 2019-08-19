@@ -1,5 +1,5 @@
 mat-card-content h1{
-    padding-left: 100px;
+    text-align: center;
 }
 
 .form-tarefas{
@@ -11,4 +11,23 @@ mat-card-content h1{
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+}
+
+.button-group{
+    text-align: center;
+}
+
+.btn{
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+.btn-salvar{
+    color: white;
+    background-color: rgba(21, 150, 21, 0.726);
+}
+
+.btn-cancelar{
+    color: white;
+    background-color: rgb(236, 75, 75);
 }

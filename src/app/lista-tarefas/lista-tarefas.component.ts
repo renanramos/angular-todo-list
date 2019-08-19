@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-lista-tarefas',
+  selector: 'lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css']
 })
 export class ListaTarefasComponent implements OnInit {
+
+  @Input() tarefa: any;
 
   constructor() { }
 

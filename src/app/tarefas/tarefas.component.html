@@ -1,13 +1,18 @@
 <mat-card>
   <mat-card-content>
-    <h1>Tarefa</h1>
     <section class="form-tarefas">
-      <mat-form-field>
-        <input matInput placeholder="Nome" name="titulo" />
-      </mat-form-field><br>
-      <mat-form-field>
-        <textarea matInput placeholder="Descrição" name="titulo" ></textarea>
-      </mat-form-field>
+      <form [formGroup]="tarefaForm">
+        <mat-form-field>
+          <input matInput placeholder="Nome" name="titulo" formControlName="titulo" />
+        </mat-form-field><br>
+        <mat-form-field>
+          <textarea matInput placeholder="Descrição" name="descricao" formControlName="descricao"></textarea>
+        </mat-form-field>
+        <div class="button-group">
+          <button mat-raised-button class="btn btn-salvar" (click)="salvarTarefa(tarefa);">Salvar</button>
+          <button mat-raised-button class="btn btn-cancelar">Cancelar</button>
+        </div>
+      </form>
     </section>
   </mat-card-content>
 </mat-card>

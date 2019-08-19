@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TodoApp';
+  
+  tarefas: any[] = [];
+
+  adicionaNovaTarefa(tarefa: any){
+    this.tarefas.push(tarefa)
+    console.log(this.tarefas)
+  }
+
 }
