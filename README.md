@@ -8,7 +8,7 @@ Applicação TODO utilizando Angular 8.
 <code>
     git remote add origin https://github.com/renanramos/angular-todo-list.git
 </code>
-<br>
+
 * Após, acesse a pasta do projeto onde foi realizado o clone e instale as dependências (é preciso ter instalado o NodeJS)
 <code>
     npm i
