@@ -17,12 +17,5 @@ Applicação TODO utilizando Angular 8.
 ## Executando
 
 Assim que a instalação dependências estiver concluída, inicialize a execução do projeto:
-<code>
-    npm start
-</code>
 
-ou
-
-<code>
-    ng serve
-</code>
+<code>npm start</code> ou <code>ng serve</code>
