@@ -1,6 +1,8 @@
 <div *ngIf="tarefas.length > 0; else semTarefas">
   <div *ngFor="let tarefa of tarefas.reverse()" class="lista-tarefas">
-    <app-tarefas-card [tarefa]="tarefa" *ngIf="tarefa"></app-tarefas-card>
+    <div class="card-hover" (click)="excluiTarefa(tarefa);">
+      <app-tarefas-card [tarefa]="tarefa" *ngIf="tarefa"></app-tarefas-card>
+    </div>
   </div>
 </div>
 <ng-template #semTarefas>

@@ -3,7 +3,15 @@
     margin: 10px 5px;    
 }
 
+.card-hover:hover{
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(243, 243, 243);
+    cursor: pointer;
+}
+
 .sem-tarefas{
-    color: whitesmoke;
-    margin: 100px auto;
+    text-align: center;
+    color: whitesmoke;    
+    vertical-align: middle;
+    margin-top: 100px;
 }

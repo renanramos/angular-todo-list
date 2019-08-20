@@ -12,8 +12,4 @@ export class TarefaService {
   addTarefa(tarefa: Tarefa){
     TarefaService.criadoNovaTarefa.emit(tarefa);
   }
-
-  getTarefas(){
-
-  }
 }

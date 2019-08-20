@@ -6,3 +6,7 @@ mat-card-header > small{
     margin-top: 5px;
     vertical-align: middle;
 }
+
+mat-card-content{
+    padding: 10px 0px 5px 10px;
+}

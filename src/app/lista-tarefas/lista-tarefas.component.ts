@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { TarefaService } from '../service/tarefa-service.service';
+import { Tarefa } from '../model/tarefa';
 
 @Component({
   selector: 'lista-tarefas',
@@ -9,7 +10,7 @@ import { TarefaService } from '../service/tarefa-service.service';
 })
 export class ListaTarefasComponent implements OnInit{
   
-  private tarefas: any = [];
+  private tarefas: Array<Tarefa> = [];
 
   constructor() { }
 
@@ -17,4 +18,8 @@ export class ListaTarefasComponent implements OnInit{
     TarefaService.criadoNovaTarefa.subscribe(tarefa => this.tarefas.push(tarefa));
   }
  
+  excluiTarefa(event: any){
+    this.tarefas.splice(this.tarefas.indexOf(event), 1);
+  }
+
 }
