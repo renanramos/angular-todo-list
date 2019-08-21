@@ -1,10 +1,10 @@
 mat-card-content h1{
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 mat-form-field{
-    padding: 30px 0px;
+    padding: 20px 0px;
 }
 
 mat-error{
@@ -32,7 +32,6 @@ mat-error{
 }
 
 .button-group{
-    /* margin-top: 30px; */
     text-align: center;
 }
 

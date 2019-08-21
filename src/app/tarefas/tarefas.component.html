@@ -4,12 +4,12 @@
       <div class="input-form">
         <mat-form-field>
           <mat-label>Título</mat-label>
-          <input matInput placeholder="Título" [(ngModel)]="tarefa.titulo" />
+          <input matInput [(ngModel)]="tarefa.titulo" />
           <mat-error *ngIf="erro">{{ error.message }}</mat-error>
         </mat-form-field><br>
         <mat-form-field>
           <mat-label>Descrição</mat-label>
-          <textarea matInput placeholder="Descrição" [(ngModel)]="tarefa.descricao" ></textarea>
+          <textarea matInput [(ngModel)]="tarefa.descricao" ></textarea>
         </mat-form-field>
         <mat-error *ngIf="error">{{ error.message }}</mat-error>
       </div>
