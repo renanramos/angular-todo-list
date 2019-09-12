@@ -26,7 +26,7 @@ export class TarefasComponent implements OnInit {
   ngOnInit() {
   }
 
-  salvarTarefa(tarefa: Tarefa) {
+  salvarTarefa(tarefa: any) {
     if (!tarefa.titulo || !tarefa.descricao) {
       this.getError();
     } else {
