@@ -38,11 +38,11 @@ export class TarefasComponent implements OnInit {
     }
   }
 
-  limpar(tarefa: Tarefa) {
+  limpar(tarefa: any) {
     this.resetFields(tarefa);
   }
 
-  resetFields(tarefa: Tarefa) {
+  resetFields(tarefa: any) {
     tarefa.titulo = '';
     tarefa.descricao = '';
     

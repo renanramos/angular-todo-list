@@ -10,7 +10,7 @@ import { Tarefa } from '../model/tarefa';
 })
 export class ListaTarefasComponent implements OnInit{
   
-  private tarefas: Array<Tarefa> = [];
+  tarefas: Array<Tarefa> = [];
 
   constructor() { }
 
